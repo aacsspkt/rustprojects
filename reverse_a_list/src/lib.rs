@@ -1,10 +1,6 @@
 use std::fmt::Debug;
 
 pub fn reverse<T: Debug>(v: &mut [T]) {
-    if v.is_empty() {
-        return v;
-    }
-    
     let size = v.len();
     let mid = size / 2;
 
@@ -28,5 +24,9 @@ mod tests {
         reverse(&mut list2);
 
         assert_eq!(list2, [26, 21, 101, 92, 12, 85, 13, 48, 19]);
+
+        let mut list3: [u32; 0] = [];
+        reverse(&mut list3);
+        assert_eq!(list3, []);
     }
 }
