@@ -3,7 +3,7 @@ fn main() {
 
     let mut list = Vec::new();
 
-    for i in 1..=20 {
+    for i in 0..20 {
         list.push(i);
     }
 
